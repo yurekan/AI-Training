@@ -1,0 +1,48 @@
+# Feature engineering
+# Feature Engineering is the process of transforming raw data into useful features that
+# help us to understand our model better and increase its predictive power.
+# I will carry out feature engineering on different types of variables.
+ 
+# First, I will display the categorical and numerical variables again separately.
+ 
+# check data types in X_train
+ 
+X_train.dtypes
+ 
+# check missing values in numerical variables in X_train
+# For numerical items in training data
+ 
+X_train[numerical].isnull().sum()
+ 
+# check missing values in numerical variables in X_test
+ 
+X_test[numerical].isnull().sum()
+ 
+# print percentage of missing values in the numerical variables in training set
+ 
+for col in numerical:
+    if X_train[col].isnull().mean()>0:
+        print(col, round(X_train[col].isnull().mean(),2))
+ 
+# imputation
+# impute missing values in X_train and X_test with respective column median in X_train
+# filling the missing data : impute = median
+# median is not sensitive to outliers , unlike mean
+ 
+#import warnings
+#warnings.filterwarnings('ignore')
+ 
+for df1 in [X_train, X_test]:
+    for col in numerical:
+        col_median=X_train[col].median()
+        df1[col].fillna(col_median, inplace=True)
+ 
+ 
+# check again missing values in numerical variables in X_train
+ 
+X_train[numerical].isnull().sum()
+ 
+# check missing values in numerical variables in X_test
+ 
+X_test[numerical].isnull().sum()
+ 
