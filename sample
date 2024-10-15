@@ -1,48 +1,21 @@
-# Feature engineering
-# Feature Engineering is the process of transforming raw data into useful features that
-# help us to understand our model better and increase its predictive power.
-# I will carry out feature engineering on different types of variables.
+# print percentage of missing values in the categorical variables in training set
  
-# First, I will display the categorical and numerical variables again separately.
+X_train[categorical].isnull().mean()
  
-# check data types in X_train
- 
-X_train.dtypes
- 
-# check missing values in numerical variables in X_train
-# For numerical items in training data
- 
-X_train[numerical].isnull().sum()
- 
-# check missing values in numerical variables in X_test
- 
-X_test[numerical].isnull().sum()
- 
-# print percentage of missing values in the numerical variables in training set
- 
-for col in numerical:
-    if X_train[col].isnull().mean()>0:
-        print(col, round(X_train[col].isnull().mean(),2))
- 
-# imputation
-# impute missing values in X_train and X_test with respective column median in X_train
-# filling the missing data : impute = median
-# median is not sensitive to outliers , unlike mean
- 
-#import warnings
-#warnings.filterwarnings('ignore')
- 
-for df1 in [X_train, X_test]:
-    for col in numerical:
-        col_median=X_train[col].median()
-        df1[col].fillna(col_median, inplace=True)
+# checking nan values in the dataframe df
+df[categorical].isnull().sum()
  
  
-# check again missing values in numerical variables in X_train
+# impute missing categorical variables with most frequent value
  
-X_train[numerical].isnull().sum()
+for df2 in [X_train, X_test]:
+    df2['WindGustDir'].fillna(X_train['WindGustDir'].mode()[0], inplace=True)
+    df2['WindDir9am'].fillna(X_train['WindDir9am'].mode()[0], inplace=True)
+    df2['WindDir3pm'].fillna(X_train['WindDir3pm'].mode()[0], inplace=True)
+    df2['RainToday'].fillna(X_train['RainToday'].mode()[0], inplace=True)
  
-# check missing values in numerical variables in X_test
  
-X_test[numerical].isnull().sum()
+# check missing values in categorical variables in X_train
+ 
+X_train[categorical].isnull().sum()
  
