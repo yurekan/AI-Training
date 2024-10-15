@@ -1,0 +1,79 @@
+1. Decorators:
+
+a) Write a decorator named @log_execution that logs the execution time of a function. It should print the function name and execution time to the console.
+
+2. Generators:
+
+a) Write a generator function named prime_numbers that yields all prime numbers up to a given limit.
+
+3. Lambda Expressions:
+
+a) Write a lambda expression that takes a list of numbers as input and returns a new list containing only the even numbers.
+
+4. Modules and Packages:
+
+a) Create a module named calculator.py containing functions for basic arithmetic operations (add, subtract, multiply, divide). Create a package named my_package that contains the calculator.py module. Write a separate script that imports the calculator module from my_package and performs some calculations.
+
+5. Inheritance and Polymorphism:
+
+a) Create a base class named Animal with methods make_sound and move. Create two derived classes Dog and Cat that inherit from Animal and override the make_sound and move methods with specific behaviors.
+
+6. File Handling:
+
+a) Write a program that reads a text file named input.txt and counts the occurrence of each word in the file. Store the word counts in a dictionary and print the results.
+
+7. Error Handling:
+
+a) Write a program that prompts the user to enter a number and divide it by another number. Handle the ZeroDivisionError exception gracefully, printing an error message and asking the user to re-enter the numbers.
+
+8. Regular Expressions:
+
+a) Write a program that takes a string as input and extracts all email addresses from the string using regular expressions.
+
+9. List Comprehensions:
+
+a) Write a program that uses list comprehension to create a new list containing the squares of all odd numbers in a given list.
+
+10. Dictionaries:
+
+a) Write a program that takes a list of strings as input and creates a dictionary where keys are the words and values are the number of times each word appears in the list.
+
+11. Sets:
+
+a) Write a program that takes two lists as input and returns a set containing the elements that are common to both lists.
+
+12. Multithreading:
+
+a) Write a program that uses two threads to calculate the sum of even numbers and odd numbers in a list, respectively. Print the results from both threads.
+
+13. Iterators:
+
+a) Create a custom iterator class named EvenNumbersIterator that iterates over even numbers within a given range.
+
+14. Function Arguments:
+
+a) Write a function that accepts a variable number of arguments and calculates their average. The function should be able to handle both positional and keyword arguments.
+
+15. Object-Oriented Programming:
+
+a) Create a class named Book with attributes title, author, and isbn. Implement methods for getting and setting these attributes. Create a subclass named FictionBook that inherits from Book and adds an attribute genre.
+
+16. Data Structures:
+
+a) Write a function that takes a list as input and returns a new list containing the same elements in reverse order. Do not use the built-in reverse() method.
+
+17. Modules:
+
+a) Write a script that uses the datetime module to print the current date and time in a specific format.
+
+18. Advanced String Methods:
+
+a) Write a program that takes a string as input and capitalizes the first letter of each word in the string.
+
+19. Networking:
+
+a) Write a program that uses the requests module to fetch the content of a web page from a given URL.
+
+20. Debugging:
+
+a) Create a program with a deliberate error and use the pdb module to identify and fix the error.
