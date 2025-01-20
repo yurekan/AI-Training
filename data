@@ -1,0 +1,15 @@
+{
+"product-visit": [
+    {
+    "name": "SRS-XG300",
+    "parentCategory": "Audio",
+    "description": "Take loud wherever you go: The XG300 speaker is built for taking high quality sound with you wherever you go. Whether you're having a garden party or heading to the beach, simply charge up, grab the easy-to-hold handle and take this durable, portable and great-sounding speaker with you.",
+    "product_id": "1"
+    }
+],
+"visit-count": {
+    "TV": 1,
+    "Audio": 2,
+    "Camera": 3
+}
+}
